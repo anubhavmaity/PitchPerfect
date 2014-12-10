@@ -11,9 +11,11 @@ import AVFoundation
 
 class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
-    @IBOutlet weak var recordingInProgress: UILabel!
     
     @IBOutlet weak var recordButton: UIButton!
+    
+    @IBOutlet weak var recordingInProgress: UILabel!
+    
     @IBOutlet weak var stopButton: UIButton!
     
     var audioRecorder:AVAudioRecorder!
@@ -63,12 +65,23 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         session.setCategory(AVAudioSessionCategoryPlayAndRecord, error: nil)
         
         audioRecorder = AVAudioRecorder(URL: filePath, settings: nil, error: nil)
-        audioRecorder.delegate = self
+        audioRecorder.delegate = self //NEVER EVER
         audioRecorder.meteringEnabled = true
         audioRecorder.prepareToRecord()
         audioRecorder.record()
         
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "stopRecording" {
+            let playSoundsVC:PlaySoundsViewController = segue.destinationViewController as PlaySoundsViewController
+            let data = sender as RecordAudio
+            playSoundsVC.recievedAudio = data
+        }
+        
+        
+    }
+    
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool) {
         if(flag){
             recordedAudio = RecordAudio()
@@ -84,17 +97,10 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        if(segue.identifier == "stopRecording"){
-            let playSoundsVC:PlaySoundsViewController = segue.destinationViewController as PlaySoundsViewController
-            let data = sender as RecordAudio
-            playSoundsVC.recievedAudio = data
-            
-        }
-    }
+    
     
     @IBAction func stopRecord(sender: AnyObject) {
+        
         //TODO: Show text "recording in progress"
         recordingInProgress.hidden = true
         //TODO: Record user's voice
