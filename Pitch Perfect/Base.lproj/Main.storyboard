@@ -14,18 +14,18 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcX-83-XET">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcX-83-XET">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zci-to-zYm">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <rect key="frame" x="-25" y="-25" width="50" height="50"/>
                                 <state key="normal" image="microphone">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -34,8 +34,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xm5-M5-WDS">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="stopButton">
+                                <rect key="frame" x="-25" y="-25" width="50" height="50"/>
+                                <state key="normal" image="stop">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -109,12 +109,12 @@
                         <viewControllerLayoutGuide type="top" id="kes-1o-6R0"/>
                         <viewControllerLayoutGuide type="bottom" id="PMh-lD-Vuk"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="udx-7b-uJn">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="udx-7b-uJn">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RV-zZ-1mK">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <rect key="frame" x="-50" y="-50" width="100" height="100"/>
                                 <state key="normal" image="snail">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -125,7 +125,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2g-T6-RL6">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="rabbit">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="playSoundFast:" destination="izE-IM-2ww" eventType="touchUpInside" id="5Mj-Wt-4RU"/>
@@ -133,7 +133,8 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IyT-ub-wcM">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="stopButton">
+                                <state key="normal" image="stop">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -142,6 +143,9 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="1RV-zZ-1mK" firstAttribute="leading" secondItem="udx-7b-uJn" secondAttribute="leadingMargin" constant="24" id="IlP-Lt-WF4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="t2g-T6-RL6" secondAttribute="trailing" constant="24" id="MZg-AI-SNL"/>
@@ -159,12 +163,12 @@
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="xh2-tR-qED"/>
-                                <exclude reference="IlP-Lt-WF4"/>
-                                <exclude reference="zJH-5s-eYZ"/>
                                 <exclude reference="QS4-HJ-ju4"/>
                                 <exclude reference="mTl-Aq-PV5"/>
                                 <exclude reference="MZg-AI-SNL"/>
                                 <exclude reference="cfY-7H-w2q"/>
+                                <exclude reference="IlP-Lt-WF4"/>
+                                <exclude reference="zJH-5s-eYZ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -175,24 +179,24 @@
                             </mask>
                             <mask key="constraints">
                                 <include reference="xh2-tR-qED"/>
-                                <include reference="IlP-Lt-WF4"/>
-                                <include reference="zJH-5s-eYZ"/>
                                 <include reference="QS4-HJ-ju4"/>
                                 <include reference="mTl-Aq-PV5"/>
                                 <include reference="MZg-AI-SNL"/>
                                 <include reference="cfY-7H-w2q"/>
+                                <include reference="IlP-Lt-WF4"/>
+                                <include reference="zJH-5s-eYZ"/>
                             </mask>
                         </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pyd-KW-JkH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1741.5" y="230"/>
+            <point key="canvasLocation" x="1706" y="224"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--NavigationController-->
         <scene sceneID="FTU-G6-zLx">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9qG-i2-kau" sceneMemberID="viewController">
+                <navigationController title="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="9qG-i2-kau" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pCu-rv-G20">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -205,13 +209,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZIQ-Pb-8Th" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="121.5" y="230"/>
+            <point key="canvasLocation" x="57" y="230"/>
         </scene>
     </scenes>
     <resources>
         <image name="microphone" width="100" height="100"/>
-        <image name="rabbit" width="100" height="100"/>
-        <image name="snail" width="100" height="100"/>
-        <image name="stopButton" width="100" height="100"/>
+        <image name="rabbit" width="200" height="200"/>
+        <image name="snail" width="200" height="200"/>
+        <image name="stop" width="100" height="100"/>
     </resources>
 </document>

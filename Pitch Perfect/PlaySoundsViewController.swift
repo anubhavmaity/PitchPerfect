@@ -15,6 +15,9 @@ class PlaySoundsViewController: UIViewController {
     var audioPlayer: AVAudioPlayer!
     var recievedAudio: RecordAudio!
     
+    var audioEngine:AVAudioEngine!
+    var audioFile:AVAudioFile!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        if var filePath = NSBundle.mainBundle().pathForResource("movie_quote", ofType: "mp3"){
@@ -28,6 +31,8 @@ class PlaySoundsViewController: UIViewController {
         
         audioPlayer = AVAudioPlayer(contentsOfURL: recievedAudio.filePathUrl, error: nil)
         audioPlayer.enableRate = true
+        audioEngine = AVAudioEngine()
+        audioFile = AVAudioFile(forReading: recievedAudio.filePathUrl, error: nil)
         // Do any additional setup after loading the view.
     }
 
@@ -38,6 +43,8 @@ class PlaySoundsViewController: UIViewController {
     
     func playWithRate(rateX:Float){
         audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
         audioPlayer.rate = rateX
         audioPlayer.currentTime = 0.0
         audioPlayer.play()
@@ -52,8 +59,40 @@ class PlaySoundsViewController: UIViewController {
         playWithRate(0.5)
     }
 
+    @IBAction func playChickmunkSound(sender: AnyObject) {
+        playAudioWithVariablePitch(1000)
+        
+    }
+    
+    @IBAction func playDarthvaderAudio(sender: UIButton) {
+        playAudioWithVariablePitch(-1000)
+    }
+    
     @IBAction func stopSound(sender: AnyObject) {
         audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
+    }
+    
+    func playAudioWithVariablePitch(pitch: Float){
+        audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
+        
+        var audioPlayerNode = AVAudioPlayerNode()
+        audioEngine.attachNode(audioPlayerNode)
+        
+        var changePitchEffect = AVAudioUnitTimePitch()
+        changePitchEffect.pitch = pitch
+        audioEngine.attachNode(changePitchEffect)
+        
+        audioEngine.connect(audioPlayerNode, to: changePitchEffect, format: nil)
+        audioEngine.connect(changePitchEffect, to: audioEngine.outputNode, format: nil)
+        
+        audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
+        audioEngine.startAndReturnError(nil)
+        
+        audioPlayerNode.play()
     }
     /*
     // MARK: - Navigation

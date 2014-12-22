@@ -1,0 +1,12 @@
+
+/* Class = "IBUINavigationItem"; title = "Record"; ObjectID = "8mh-ab-MP1"; */
+"8mh-ab-MP1.title" = "Record";
+
+/* Class = "IBUIViewController"; title = "RecordSoundsViewController"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "RecordSoundsViewController";
+
+/* Class = "IBUILabel"; text = "Recording"; ObjectID = "HcX-83-XET"; */
+"HcX-83-XET.text" = "Recording";
+
+/* Class = "IBUIViewController"; title = "PLAY"; ObjectID = "izE-IM-2ww"; */
+"izE-IM-2ww.title" = "PLAY";

@@ -52,22 +52,6 @@
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pitch Perfect/RecordSoundsViewController.swift"
-            timestampString = "439824748.625876"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "recordAction(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.AddressBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "No"
@@ -101,6 +85,110 @@
                   symbolName = "swift_dynamicCastClassUnconditional"
                   moduleName = "libswiftCore.dylib"
                   offsetFromSymbolStart = "51">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pitch Perfect/PlaySoundsViewController.swift"
+            timestampString = "440259684.145433"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "playSoundFast(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pitch Perfect/RecordSoundsViewController.swift"
+            timestampString = "440254650.553334"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "RecordSoundsViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pitch_Perfect.RecordSoundsViewController.recordingInProgress.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UILabel&gt;"
+                  moduleName = "Pitch Perfect"
+                  urlString = "file:///Users/anubhavmaity/Desktop/IOS%20Apps/Pitch%20Perfect/Pitch%20Perfect/RecordSoundsViewController.swift"
+                  timestampString = "440254677.306694"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pitch_Perfect.RecordSoundsViewController.recordingInProgress.materializeForSet : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UILabel&gt;"
+                  moduleName = "Pitch Perfect"
+                  urlString = "file:///Users/anubhavmaity/Desktop/IOS%20Apps/Pitch%20Perfect/Pitch%20Perfect/RecordSoundsViewController.swift"
+                  timestampString = "440254677.306852"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pitch_Perfect.RecordSoundsViewController.init (Pitch_Perfect.RecordSoundsViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; Pitch_Perfect.RecordSoundsViewController"
+                  moduleName = "Pitch Perfect"
+                  urlString = "file:///Users/anubhavmaity/Desktop/IOS%20Apps/Pitch%20Perfect/Pitch%20Perfect/RecordSoundsViewController.swift"
+                  timestampString = "440254677.306998"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "157">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pitch_Perfect.RecordSoundsViewController.init (Pitch_Perfect.RecordSoundsViewController.Type)() -&gt; Pitch_Perfect.RecordSoundsViewController"
+                  moduleName = "Pitch Perfect"
+                  urlString = "file:///Users/anubhavmaity/Desktop/IOS%20Apps/Pitch%20Perfect/Pitch%20Perfect/RecordSoundsViewController.swift"
+                  timestampString = "440254677.307269"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "77">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pitch_Perfect.RecordSoundsViewController.init (Pitch_Perfect.RecordSoundsViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; Pitch_Perfect.RecordSoundsViewController"
+                  moduleName = "Pitch Perfect"
+                  urlString = "file:///Users/anubhavmaity/Desktop/IOS%20Apps/Pitch%20Perfect/Pitch%20Perfect/RecordSoundsViewController.swift"
+                  timestampString = "440254677.307483"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "88">
                </Location>
             </Locations>
          </BreakpointContent>
